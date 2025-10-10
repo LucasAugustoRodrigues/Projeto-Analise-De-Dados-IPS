@@ -8,11 +8,47 @@
 
 ## 🚀 Como Executar
 
+### **Método 1: Pelo Terminal/PowerShell (Recomendado)**
+
+1. **Abra o PowerShell ou Terminal**
+2. **Navegue até a pasta do projeto:**
+```powershell
+cd "c:\Users\lucas\Faculdade\Pedro_Girotto\Estatistica_E_Probabilidade_Dp\Projeto-Analise-De-Dados-IPS"
+```
+
+3. **Execute o dashboard:**
+```powershell
+streamlit run dashboard.py
+```
+
+4. **Acesse no navegador:**
+   - O Streamlit tentará abrir automaticamente
+   - Se não abrir, acesse manualmente: `http://localhost:8501`
+
+### **Método 2: Pelo VS Code (Alternativo)**
+
+1. **Abra o terminal integrado** (`Ctrl + '`)
+2. **Execute:**
 ```bash
 streamlit run dashboard.py
 ```
 
-O dashboard abrirá automaticamente no navegador em `http://localhost:8501`
+### **⚠️ Se não funcionar automaticamente:**
+
+1. **Copie e cole no navegador:** `http://localhost:8501`
+2. **Ou tente:** `http://127.0.0.1:8501`
+3. **Verifique se apareceu a mensagem:** `You can now view your Streamlit app in the browser.`
+
+### **🔧 Troubleshooting:**
+
+**Erro "streamlit não reconhecido":**
+```powershell
+pip install streamlit
+```
+
+**Erro de arquivo não encontrado:**
+- Certifique-se de estar na pasta correta
+- Verifique se `dashboard.py` está na pasta atual
 
 ---
 
