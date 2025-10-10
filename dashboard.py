@@ -1,4 +1,4 @@
-# Dashboard IPS Brasil 2024 - Versão Didática
+# Dashboard IPS Brasil 2024 
 # Projeto de Estatística e Probabilidade
 # Aluno: Lucas
 
@@ -11,14 +11,10 @@ import pandas as pd         # Para manipular dados (tabelas)
 import plotly.express as px # Para criar gráficos interativos
 import numpy as np          # Para cálculos matemáticos
 
-# =============================================================================
-# CONFIGURAÇÃO INICIAL DA PÁGINA
-# =============================================================================
-
 # Configura como a página vai aparecer no navegador
 st.set_page_config(
     page_title="Dashboard IPS Brasil 2024",  # Título da aba do navegador
-    page_icon="🇧🇷",                        # Ícone da aba
+    page_icon="🇧🇷",                          # Ícone da aba
     layout="wide"                            # Layout largo (usa toda a tela)
 )
 
@@ -58,9 +54,9 @@ def carregar_dados():
         st.error(f"Erro ao carregar o arquivo: {erro}")
         return None
 
-# =============================================================================
+# 
 # FUNÇÃO PRINCIPAL DO DASHBOARD
-# =============================================================================
+# 
 
 def main():
     """
@@ -113,9 +109,9 @@ def main():
     elif pagina == "📊 Gráficos Detalhados":
         pagina_graficos_detalhados(df)
 
-# =============================================================================
+# 
 # PÁGINA 1: VISÃO GERAL
-# =============================================================================
+# 
 
 def pagina_visao_geral(df):
     """
@@ -350,9 +346,9 @@ def pagina_visao_geral(df):
             - Diferença da média: **{ips_comparacao - df['IPS'].mean():.2f}**
             """)
 
-# =============================================================================
+# 
 # PÁGINA 2: ANÁLISE POR REGIÃO
-# =============================================================================
+# 
 
 def pagina_analise_regional(df):
     """
@@ -533,9 +529,9 @@ def pagina_analise_regional(df):
         use_container_width=True
     )
 
-# =============================================================================
+# 
 # PÁGINA 3: CAPITAIS VS INTERIOR
-# =============================================================================
+# 
 
 def pagina_capitais_vs_interior(df):
     """
@@ -726,9 +722,9 @@ def pagina_capitais_vs_interior(df):
         use_container_width=True
     )
 
-# =============================================================================
+# 
 # PÁGINA 4: GRÁFICOS DETALHADOS
-# =============================================================================
+# 
 
 def pagina_graficos_detalhados(df):
     """
@@ -976,9 +972,9 @@ def estatisticas_descritivas(df):
     - Há {'grande' if (df['IPS'].max() - df['IPS'].min()) > 30 else 'pequena'} diferença entre o melhor e pior município
     """)
 
-# =============================================================================
+# 
 # EXECUÇÃO PRINCIPAL
-# =============================================================================
+# 
 
 if __name__ == "__main__":
     main()
